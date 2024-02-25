@@ -2,6 +2,7 @@ package com.github.config;
 
 import com.github.bean.TestBean1;
 import com.github.bean.TestBean2;
+import com.github.spring.AsyncTaskExecutionListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

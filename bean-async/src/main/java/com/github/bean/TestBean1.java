@@ -1,5 +1,6 @@
 package com.github.bean;
 
+import com.github.spring.AsyncTaskExecutor;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -10,11 +11,21 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TestBean1 {
 
+//    public void initMethod1() {
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException ex) {
+//            log.error("error", ex);
+//        }
+//    }
+
     public void initMethod1() {
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException ex) {
-            log.error("error", ex);
-        }
+        AsyncTaskExecutor.submitTask(() -> {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException ex) {
+                log.error("error", ex);
+            }
+        });
     }
 }
