@@ -11,21 +11,21 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TestBean2 {
 
-//    public void initMethod2() {
-//        try {
-//            Thread.sleep(5000);
-//        } catch (InterruptedException ex) {
-//            log.error("error", ex);
-//        }
-//    }
-
     public void initMethod2() {
-        AsyncTaskExecutor.submitTask(() -> {
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException ex) {
-                log.error("error", ex);
-            }
-        });
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException ex) {
+            log.error("error", ex);
+        }
     }
+
+//    public void initMethod2() {
+//        AsyncTaskExecutor.submitTask(() -> {
+//            try {
+//                Thread.sleep(5000);
+//            } catch (InterruptedException ex) {
+//                log.error("error", ex);
+//            }
+//        });
+//    }
 }

@@ -19,6 +19,8 @@ public class TestBeanInitConfig {
         return new TestBean1();
     }
 
+
+
     @Bean(initMethod = "initMethod2")
     public TestBean2 testBean2() {
         return new TestBean2();
